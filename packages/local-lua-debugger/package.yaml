@@ -1,0 +1,20 @@
+---
+name: local-lua-debugger
+description: A simple Lua debugger adapter which requires no additional dependencies.
+homepage: https://github.com/Ismoh/local-lua-debugger-vscode
+licenses:
+  - MIT
+languages:
+  - Lua
+categories:
+  - DAP
+source:
+  id: pkg:github/Ismoh/local-lua-debugger-vscode@master
+  build:
+    run: |
+      npm install
+      npm run build
+  bin: node:extension/debugAdapter.js
+
+bin:
+  local-lua-debugger: "{{source.bin}}"
