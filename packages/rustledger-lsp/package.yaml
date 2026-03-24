@@ -15,10 +15,14 @@ source:
   build:
     run: |
       cargo build --release -p rustledger-lsp
-  bin: target/release/rledger-lsp
+  asset:
+    - target: unix
+      bin: target/release/rledger-lsp
+    - target: win
+      bin: target/release/rledger-lsp.exe
 
 bin:
-  rledger-lsp: "{{source.bin}}"
+  rledger-lsp: "{{source.asset.bin}}"
 
 neovim:
   lspconfig: rledgerls
