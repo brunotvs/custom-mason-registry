@@ -13,12 +13,17 @@ source:
   # renovate:datasource=github-tags
   id: pkg:github/rustledger/rustledger@v0.10.1
   build:
-    run: |
-      cargo build --release -p rustledger-lsp
-  bin: target/release/rledger-lsp
+    - target: unix
+      run: |
+        cargo build --release -p rustledger-lsp
+      bin: target/release/rledger-lsp
+    - target: win
+      run: |
+        cargo build --release -p rustledger-lsp
+      bin: target/release/rledger-lsp.exe
 
 bin:
-  rledger-lsp: "{{source.bin}}"
+  rledger-lsp: "{{source.build.bin}}"
 
 neovim:
   lspconfig: rledgerls
