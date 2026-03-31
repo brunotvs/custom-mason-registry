@@ -9,8 +9,9 @@ languages:
 categories:
   - LSP
 source:
-  id: pkg:generic/LuaCATS/luassert@main
+  id: pkg:github/LuaCATS/luassert@main
   build:
-    run: git clone https://github.com/LuaCATS/luassert.git
+    run: |
+      :
 share:
-  luals-addons/addonManager/addons/luassert/module/: luassert/
+  luals-addons/addonManager/addons/luassert/module/library/: library/

@@ -9,8 +9,9 @@ languages:
 categories:
   - LSP
 source:
-  id: pkg:generic/brunotvs/busted@main
+  id: pkg:github/brunotvs/busted-luals-addon@main
   build:
-    run: git clone https://github.com/brunotvs/busted-luals-addon.git busted
+    run: |
+      :
 share:
-  luals-addons/addonManager/addons/busted/module/: busted/
+  luals-addons/addonManager/addons/busted/module/library/: library/
