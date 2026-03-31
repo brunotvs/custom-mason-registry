@@ -1,16 +1,18 @@
 ---
-name: luals-addon-busted
-description: Lua language server addon for busted
-homepage: https://github.com/LuaCATS/busted
+name: busted
+description: Lua unit testing framework
+homepage: https://github.com/lunarmodules/busted
 licenses:
   - MIT
 languages:
   - Lua
 categories:
-  - LSP
+  - Runtime
 source:
-  id: pkg:generic/brunotvs/busted@main
+  id: pkg:github/lunarmodules/busted@master
   build:
-    run: git clone https://github.com/brunotvs/busted-luals-addon.git busted
-share:
-  luals-addons/addonManager/addons/busted/module/: busted/
+    run: |
+      :
+  bin: bin/busted
+bin:
+  busted: "{{source.bin}}"
