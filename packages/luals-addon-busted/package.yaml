@@ -12,6 +12,6 @@ source:
   id: pkg:github/brunotvs/busted-luals-addon@main
   build:
     run: |
-      :
+      #
 share:
   luals-addons/addonManager/addons/busted/module/library/: library/

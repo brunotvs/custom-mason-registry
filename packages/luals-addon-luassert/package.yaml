@@ -12,6 +12,6 @@ source:
   id: pkg:github/LuaCATS/luassert@main
   build:
     run: |
-      :
+      #
 share:
   luals-addons/addonManager/addons/luassert/module/library/: library/
