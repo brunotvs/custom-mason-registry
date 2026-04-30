@@ -29,7 +29,7 @@ jobs:
 
           stale-PR-label: Stale
           stale-pr-message: |
-            This PR has been automatically marked as stale. 
+            This PR has been automatically marked as stale.
             If this issue is still relevant, please leave any comment, and it will be kept open.
           close-pr-message: |
             This PR has been closed due to inactivity, and will not be monitored.
