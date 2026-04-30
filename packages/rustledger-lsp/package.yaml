@@ -10,20 +10,10 @@ categories:
   - LSP
 
 source:
-  # renovate:datasource=github-tags
-  id: pkg:github/rustledger/rustledger@v0.10.1
-  build:
-    - target: unix
-      run: |
-        cargo build --release -p rustledger-lsp
-      bin: target/release/rledger-lsp
-    - target: win
-      run: |
-        cargo build --release -p rustledger-lsp
-      bin: target/release/rledger-lsp.exe
+  id: pkg:cargo/rustledger-lsp@0.14.1
 
 bin:
-  rledger-lsp: "{{source.build.bin}}"
+  rledger-lsp: cargo:rledger-lsp
 
 neovim:
   lspconfig: rledgerls
