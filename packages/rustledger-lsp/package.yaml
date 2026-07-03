@@ -10,7 +10,7 @@ categories:
   - LSP
 
 source:
-  id: pkg:cargo/rustledger-lsp@0.15.0
+  id: pkg:cargo/rustledger-lsp@0.19.1
 
 bin:
   rledger-lsp: cargo:rledger-lsp
